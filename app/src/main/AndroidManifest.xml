@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NotesAppFirebase">
         <activity
+            android:name=".notesactivity"
+            android:exported="false" />
+        <activity
             android:name=".forgotpassword"
             android:exported="true" />
         <activity
