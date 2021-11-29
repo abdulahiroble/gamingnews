@@ -1,19 +1,25 @@
 package com.example.notesappfirebase;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.PopupMenu;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
@@ -67,8 +73,54 @@ public class notesactivity extends AppCompatActivity {
             @Override
             protected void onBindViewHolder(@NonNull NoteViewHolder noteViewHolder, int i, @NonNull firebasemodel firebasemodel) {
 
+                ImageView popbutton = noteViewHolder.itemView.findViewById(R.id.menupopbutton);
+
                 noteViewHolder.notetitle.setText(firebasemodel.getTitle());
                 noteViewHolder.notecontent.setText(firebasemodel.getContent());
+
+                noteViewHolder.notetitle.setText(firebasemodel.getTitle());
+                noteViewHolder.notecontent.setText(firebasemodel.getContent());
+
+                noteViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        // open detail activity
+                        // Toast.makeText(getApplicationContext(), "This is clicked", Toast.LENGTH_SHORT).show();
+
+                        Intent intent = new Intent(v.getContext(), notedetails.class);
+                        v.getContext().startActivity(intent);
+                    }
+                });
+
+                popbutton.setOnClickListener(new View.OnClickListener() {
+                    @RequiresApi(api = Build.VERSION_CODES.M)
+                    @Override
+                    public void onClick(View v) {
+
+                        PopupMenu popupMenu = new PopupMenu(v.getContext(), v);
+                        popupMenu.setGravity(Gravity.END);
+                        popupMenu.getMenu().add("Edit").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+                            @Override
+                            public boolean onMenuItemClick(MenuItem item) {
+
+                                Intent intent = new Intent(v.getContext(), editnoteactivity.class);
+                                v.getContext().startActivity(intent);
+
+                                return false;
+                            }
+                        });
+
+                        popupMenu.getMenu().add("Delete").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+                            @Override
+                            public boolean onMenuItemClick(MenuItem item) {
+                                Toast.makeText(v.getContext(), "This note has been deleted sucessfully", Toast.LENGTH_SHORT).show();
+                                return false;
+                            }
+                        });
+
+                        popupMenu.show();
+                    }
+                });
 
             }
 

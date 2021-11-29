@@ -10,9 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NotesAppFirebase">
         <activity
-            android:name=".createnote"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            android:name=".notedetails"
             android:exported="false" />
+        <activity
+            android:name=".editnoteactivity"
+            android:exported="false" />
+        <activity
+            android:name=".createnote"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity
             android:name=".notesactivity"
             android:exported="false" />
