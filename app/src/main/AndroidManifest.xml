@@ -14,6 +14,7 @@
             android:exported="false" />
         <activity
             android:name=".editnoteactivity"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
             android:exported="false" />
         <activity
             android:name=".createnote"

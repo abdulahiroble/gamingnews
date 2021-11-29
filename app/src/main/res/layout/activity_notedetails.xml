@@ -27,7 +27,7 @@
 
     </androidx.appcompat.widget.Toolbar>
 
-    <EditText
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:textSize="15sp"
@@ -39,7 +39,7 @@
         android:padding="16dp"
         android:id="@+id/contentofnotedetail">
 
-    </EditText>
+    </TextView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/gotoeditnote"
@@ -49,10 +49,10 @@
         android:layout_alignParentBottom="true"
         android:layout_gravity="bottom|end"
         android:layout_marginRight="30dp"
-        android:layout_marginBottom="27dp"
-        android:background="#A1F4Fb"
-        android:src="@drawable/edit"
-        app:maxImageSize="56dp">
+        android:layout_marginBottom="30dp"
+        android:background="#A1F4AB"
+        android:src="@drawable/ic_baseline_edit_24"
+        app:maxImageSize="40dp">
 
 
     </com.google.android.material.floatingactionbutton.FloatingActionButton>
