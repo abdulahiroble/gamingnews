@@ -11,6 +11,7 @@
         android:theme="@style/Theme.NotesAppFirebase">
         <activity
             android:name=".createnote"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
             android:exported="false" />
         <activity
             android:name=".notesactivity"
