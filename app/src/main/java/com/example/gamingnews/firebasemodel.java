@@ -1,4 +1,4 @@
-package com.example.notesappfirebase;
+package com.example.gamingnews;
 
 public class firebasemodel {
 

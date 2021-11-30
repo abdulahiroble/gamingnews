@@ -1,4 +1,4 @@
-package com.example.notesappfirebase;
+package com.example.gamingnews;
 
 import android.content.Context;
 

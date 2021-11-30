@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.notesappfirebase">
+    package="com.example.gamingnews">
 
     <application
         android:allowBackup="true"
@@ -10,27 +10,27 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NotesAppFirebase">
         <activity
-            android:name=".notedetails"
+            android:name="com.example.gamingnews.notedetails"
             android:exported="false" />
         <activity
-            android:name=".editnoteactivity"
+            android:name="com.example.gamingnews.editnoteactivity"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
             android:exported="false" />
         <activity
-            android:name=".createnote"
+            android:name="com.example.gamingnews.createnote"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity
-            android:name=".notesactivity"
+            android:name="com.example.gamingnews.notesactivity"
             android:exported="false" />
         <activity
-            android:name=".forgotpassword"
+            android:name="com.example.gamingnews.forgotpassword"
             android:exported="true" />
         <activity
-            android:name=".signup"
+            android:name="com.example.gamingnews.signup"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.gamingnews.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
