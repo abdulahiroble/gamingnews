@@ -27,11 +27,10 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Welcome back"
-            android:textSize="42sp"
+            android:text="Welcome To Dashboard"
             android:textColor="#FFBD4D"
-            android:textStyle="bold">
-        </TextView>
+            android:textSize="42sp"
+            android:textStyle="bold"></TextView>
 
         <TextView
             android:layout_width="match_parent"
